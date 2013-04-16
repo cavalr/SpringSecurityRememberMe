@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="com.blog.cavalr.security.UserFromDB"
+           table="user">
+        <id name="userName" type="string">
+            <column name="userName" />
+            <generator class="assigned" />
+        </id>
+        <property name="password" type="string">
+            <column name="password" not-null="false" />
+        </property>
+        <property name="roles" type="string">
+            <column name="roles" not-null="false" />
+        </property>
+    </class>
+</hibernate-mapping>

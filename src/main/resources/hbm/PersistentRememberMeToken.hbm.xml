@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="com.blog.cavalr.security.Token"
+           table="persistent_logins">
+        <id name="series" type="string">
+            <column name="series" />
+            <generator class="assigned" />
+        </id>
+        <property name="username" type="string">
+            <column name="username" not-null="false" />
+        </property>
+
+        <property name="tokenValue" type="string">
+            <column name="token" not-null="false" />
+        </property>
+
+        <property name="date" type="timestamp">
+            <column name="last_used" not-null="false" />
+        </property>
+    </class>
+</hibernate-mapping>
